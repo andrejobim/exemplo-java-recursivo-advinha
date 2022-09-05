@@ -19,11 +19,6 @@ public class GuessNumber {
 
     private static void tryGuessAgain(int guess, int tryGuess, int numberTryGuess){
         tryGuess(guess, tryGuess, numberTryGuess);
-        if (guess == numberTryGuess){
-            logger.log(Level.INFO,"Parabéns, acertou o número!");
-        } else {
-            logger.log(Level.INFO,"Não foi dessa vez, boa sorte na próxima!");
-        }
         logger.log(Level.INFO,"Deseja tentar novamente ? (s/n) ");
         Scanner guessAgain = new Scanner(System.in);
         String againOption = guessAgain.next();
