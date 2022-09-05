@@ -39,7 +39,10 @@ public class GuessNumber {
         if (guess != numberGuess && numberTryGuess < tryGuess){
             numberTryGuess++;
             tryGuess(guess, tryGuess, numberTryGuess);
+        } else if (guess == numberGuess){
+            logger.log(Level.INFO,"Parabéns, acertou o número!");
+        } else {
+            logger.log(Level.INFO,"Não foi dessa vez, boa sorte na próxima!");
         }
     }
-
 }
